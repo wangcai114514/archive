@@ -73,40 +73,41 @@ body::before {
 
 /* ========== 4. 标题 ========== */
 .header {
-  max-width: 1200px;
-  margin: 0 auto 20px auto;
+  max-width: 1400px;
+  margin: 0 auto 30px auto;
   padding: 0 20px;
   text-align: center;
 }
 .header-content {
   background: var(--header-bg);
   border-radius: 8px;
-  padding: 10px 20px;
+  padding: 15px 25px;
   display: inline-block;
 }
 
-/* ========== 5. 年份网格 ========== */
+/* ========== 5. 年份网格（适配大尺寸方块） ========== */
 .year-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto 40px auto;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* 方块宽度从300→400px */
+  gap: 30px; /* 间距从20→30px */
+  max-width: 1400px; /* 网格宽度从1200→1400px */
+  margin: 0 auto 50px auto;
   padding: 0 20px;
 }
 
-/* ========== 6. 每个年份独立样式（关键！） ========== */
+/* ========== 6. 年份方块（调大尺寸） ========== */
 .year-card {
   position: relative;
   background: var(--card-bg);
-  border-radius: 8px;
-  padding: 40px 20px;
+  border-radius: 12px; /* 圆角加大 */
+  padding: 80px 30px; /* 内边距从40/20→80/30px，高度大幅增加 */
   text-align: center;
   text-decoration: none;
   color: var(--text-color);
-  font-size: 24px;
+  font-size: 32px; /* 文字从24→32px */
   font-weight: bold;
   overflow: hidden;
+  transition: transform 0.3s ease;
 }
 .year-card::before {
   content: "";
@@ -116,75 +117,81 @@ body::before {
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: left center;
+  background-position: center; /* 图片居中显示，完整呈现 */
   background-repeat: no-repeat;
-  -webkit-mask: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
-  mask: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
-  opacity: 0.2;
+  -webkit-mask: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 85%); /* 渐变到85%，显示更多图片 */
+  mask: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 85%);
+  opacity: 0.25; /* 透明度略提高，图片更清晰 */
   z-index: 1;
 }
 .year-card span {
   position: relative;
   z-index: 2;
 }
+.year-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
 
-/* 2018 */
+/* 每个年份独立图片 */
 .year-2018::before {
   background-image: url(https://raw.githubusercontent.com/wangcai114514/archive/refs/heads/main/assets/card/2018.jpg);
 }
-/* 2019 */
 .year-2019::before {
   background-image: url(https://raw.githubusercontent.com/wangcai114514/archive/refs/heads/main/assets/card/2019.jpg);
 }
-/* 2020 */
 .year-2020::before {
   background-image: url(https://raw.githubusercontent.com/wangcai114514/archive/refs/heads/main/assets/card/2020.jpg);
 }
-/* 2021 */
 .year-2021::before {
   background-image: url(https://raw.githubusercontent.com/wangcai114514/archive/refs/heads/main/assets/card/2021.jpg);
 }
-/* 2022 */
 .year-2022::before {
   background-image: url(https://raw.githubusercontent.com/wangcai114514/archive/refs/heads/main/assets/card/2022.jpg);
 }
-/* 2023 */
 .year-2023::before {
   background-image: url(https://raw.githubusercontent.com/wangcai114514/archive/refs/heads/main/assets/card/2023.jpg);
 }
-/* 2024 */
 .year-2024::before {
   background-image: url(https://raw.githubusercontent.com/wangcai114514/archive/refs/heads/main/assets/card/2024.jpg);
 }
-/* 2025 */
 .year-2025::before {
   background-image: url(https://raw.githubusercontent.com/wangcai114514/archive/refs/heads/main/assets/card/2025.jpg);
 }
-/* 2026 */
 .year-2026::before {
   background-image: url(https://raw.githubusercontent.com/wangcai114514/archive/refs/heads/main/assets/card/2026.jpg);
 }
 
-/* ========== 7. 移动端 ========== */
-@media (max-width: 768px) {
+/* ========== 7. 移动端适配（大尺寸方块） ========== */
+@media (max-width: 900px) {
   .year-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  .year-card {
+    padding: 70px 25px;
+    font-size: 28px;
   }
 }
 @media (max-width: 480px) {
   .year-grid {
     grid-template-columns: 1fr;
   }
+  .year-card {
+    padding: 60px 20px;
+    font-size: 24px;
+  }
 }
 
 /* ========== 8. 底部 ========== */
 .footer-text {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 25px;
   background: var(--header-bg);
-  border-radius: 8px;
+  border-radius: 12px;
   text-align: center;
+  font-size: 18px;
+  line-height: 1.8;
 }
 </style>
 

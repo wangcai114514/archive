@@ -47,16 +47,16 @@
 </style>
 
 <div class="year-grid">
-  <a href="2018/" class="year-card">📅 2018年</a>
-  <a href="2019/" class="year-card">📅 2019年</a>
-  <a href="2020/" class="year-card">📅 2020年</a>
-  <a href="2021/" class="year-card">📅 2021年</a>
-  <a href="2022/" class="year-card">📅 2022年</a>
-  <a href="2023/" class="year-card">📅 2023年</a>
-  <a href="2024/" class="year-card">📅 2024年</a>
-  <a href="2025/" class="year-card">📅 2025年</a>
-  <a href="2026/" class="year-card">📅 2026年</a>
+  <a href="2018/" class="year-card"> 2018年</a>
+  <a href="2019/" class="year-card"> 2019年</a>
+  <a href="2020/" class="year-card"> 2020年</a>
+  <a href="2021/" class="year-card"> 2021年</a>
+  <a href="2022/" class="year-card"> 2022年</a>
+  <a href="2023/" class="year-card"> 2023年</a>
+  <a href="2024/" class="year-card"> 2024年</a>
+  <a href="2025/" class="year-card"> 2025年</a>
+  <a href="2026/" class="year-card"> 2026年</a>
 </div>
 
-> 🔍 归档原则：只存文字和小图，大文件仅记录，不囤积、不内耗
-> 📌 访问说明：这是我的私人数字自留地，仅用于梳理回忆、完成心理交割。
+> 归档原则：只存文字和小图，大文件仅记录，不囤积、不内耗
+> 访问说明：这是我的私人数字自留地，仅用于梳理回忆、完成心理交割。

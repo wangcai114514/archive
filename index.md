@@ -42,7 +42,7 @@ body::before {
   width: 100%;
   height: 100%;
   /* 自定义背景图链接（替换这里！） */
-  background-image: url(【你的全局背景图链接】);
+  background-image: url(https://raw.githubusercontent.com/wangcai114514/archive/refs/heads/main/assets/background/R-C.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   /* 全浏览器兼容的背景缩放 */

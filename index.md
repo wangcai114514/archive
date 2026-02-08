@@ -10,7 +10,7 @@
   --bg-blend: multiply;
   --bg-brightness: 0.95;
   /* 深色模式卡片图片参数 */
-  --card-img-opacity: 0.3;
+  --card-img-opacity: 0.7;
   --card-img-brightness: 0.9;
   --card-img-contrast: 1.1;
 }
@@ -20,7 +20,7 @@
   --card-bg: #f8f9fa;
   --card-hover: #e9ecef;
   --header-bg: rgba(255, 255, 255, 0.9);
-  --bg-opacity: 0.3;
+  --bg-opacity: 0.9;
   --bg-blend: soft-light;
   --bg-brightness: 1.05;
   /* 浅色模式卡片图片优化（核心：让图片好看） */

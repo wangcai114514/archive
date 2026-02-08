@@ -24,7 +24,7 @@
   --bg-blend: soft-light;
   --bg-brightness: 1.05;
   /* 浅色模式卡片图片优化（核心：让图片好看） */
-  --card-img-opacity: 0.2;
+  --card-img-opacity: 0.6;
   --card-img-brightness: 1.15;
   --card-img-contrast: 1.05;
 }

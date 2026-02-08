@@ -9,6 +9,10 @@
   --bg-opacity: 0.9;
   --bg-blend: multiply;
   --bg-brightness: 0.95;
+  /* 深色模式卡片图片参数 */
+  --card-img-opacity: 0.3;
+  --card-img-brightness: 0.9;
+  --card-img-contrast: 1.1;
 }
 .light-mode {
   --bg-color: #ffffff;
@@ -19,6 +23,10 @@
   --bg-opacity: 0.3;
   --bg-blend: soft-light;
   --bg-brightness: 1.05;
+  /* 浅色模式卡片图片优化（核心：让图片好看） */
+  --card-img-opacity: 0.2;
+  --card-img-brightness: 1.15;
+  --card-img-contrast: 1.05;
 }
 
 /* ========== 2. 全局样式 ========== */
@@ -85,30 +93,31 @@ body::before {
   display: inline-block;
 }
 
-/* ========== 5. 年份网格（适配大尺寸方块） ========== */
+/* ========== 5. 年份网格 ========== */
 .year-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* 方块宽度从300→400px */
-  gap: 30px; /* 间距从20→30px */
-  max-width: 1400px; /* 网格宽度从1200→1400px */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
   margin: 0 auto 50px auto;
   padding: 0 20px;
 }
 
-/* ========== 6. 年份方块（调大尺寸） ========== */
+/* ========== 6. 年份方块（无渐变+深浅模式图片优化） ========== */
 .year-card {
   position: relative;
   background: var(--card-bg);
-  border-radius: 14px; /* 圆角加大 */
-  padding: 80px 40px; /* 内边距从40/20→80/40px，高度大幅增加 */
+  border-radius: 12px;
+  padding: 80px 30px;
   text-align: center;
   text-decoration: none;
   color: var(--text-color);
-  font-size: 36px; /* 文字从24→36px */
+  font-size: 32px;
   font-weight: bold;
   overflow: hidden;
   transition: transform 0.3s ease;
 }
+/* 无渐变：完整显示图片 */
 .year-card::before {
   content: "";
   position: absolute;
@@ -117,16 +126,19 @@ body::before {
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: center; /* 图片居中显示，完整呈现 */
+  background-position: center;
   background-repeat: no-repeat;
-  -webkit-mask: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 95%); /* 渐变到95%，显示更多图片 */
-  mask: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 85%);
-  opacity: 0.5; /* 透明度略提高，图片更清晰 */
+  /* 移除所有渐变蒙版：图片完整显示 */
+  opacity: var(--card-img-opacity);
+  /* 深浅模式差异化图片优化 */
+  filter: brightness(var(--card-img-brightness)) contrast(var(--card-img-contrast));
   z-index: 1;
 }
 .year-card span {
   position: relative;
   z-index: 2;
+  /* 文字加轻微阴影，确保深浅模式都清晰 */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 .year-card:hover {
   transform: translateY(-8px);
@@ -162,7 +174,7 @@ body::before {
   background-image: url(https://raw.githubusercontent.com/wangcai114514/archive/refs/heads/main/assets/card/2026.jpg);
 }
 
-/* ========== 7. 移动端适配（大尺寸方块） ========== */
+/* ========== 7. 移动端适配 ========== */
 @media (max-width: 900px) {
   .year-grid {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));

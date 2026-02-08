@@ -99,12 +99,12 @@ body::before {
 .year-card {
   position: relative;
   background: var(--card-bg);
-  border-radius: 12px; /* 圆角加大 */
-  padding: 80px 30px; /* 内边距从40/20→80/30px，高度大幅增加 */
+  border-radius: 14px; /* 圆角加大 */
+  padding: 80px 40px; /* 内边距从40/20→80/40px，高度大幅增加 */
   text-align: center;
   text-decoration: none;
   color: var(--text-color);
-  font-size: 32px; /* 文字从24→32px */
+  font-size: 36px; /* 文字从24→36px */
   font-weight: bold;
   overflow: hidden;
   transition: transform 0.3s ease;
@@ -119,7 +119,7 @@ body::before {
   background-size: cover;
   background-position: center; /* 图片居中显示，完整呈现 */
   background-repeat: no-repeat;
-  -webkit-mask: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 85%); /* 渐变到85%，显示更多图片 */
+  -webkit-mask: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 95%); /* 渐变到95%，显示更多图片 */
   mask: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 85%);
   opacity: 0.25; /* 透明度略提高，图片更清晰 */
   z-index: 1;

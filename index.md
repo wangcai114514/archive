@@ -121,7 +121,7 @@ body::before {
   background-repeat: no-repeat;
   -webkit-mask: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 95%); /* 渐变到95%，显示更多图片 */
   mask: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 85%);
-  opacity: 0.25; /* 透明度略提高，图片更清晰 */
+  opacity: 0.5; /* 透明度略提高，图片更清晰 */
   z-index: 1;
 }
 .year-card span {

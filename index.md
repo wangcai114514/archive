@@ -1,24 +1,26 @@
 <style>
-/* ========== 1. 全局变量：深浅模式差异化配置（核心！） ========== */
+/* ========== 1. 全局变量：默认深色模式（核心！） ========== */
 :root {
-  --bg-color: #ffffff;
-  --text-color: #333333;
-  --card-bg: #f8f9fa;
-  --card-hover: #e9ecef;
-  --header-bg: rgba(255, 255, 255, 0.9);
-  --bg-opacity: 0.3; /* 浅色模式：低透明度（透明感，仔细可见星空） */
-  --bg-blend: soft-light; /* 浅色混合：柔和不刺眼 */
-  --bg-brightness: 1.05; /* 浅色提亮：避免星空太暗 */
-}
-.dark-mode {
+  /* 把原浅色模式变量设为深色，原深色模式设为浅色 */
   --bg-color: #1a1a1a;
   --text-color: #f5f5f5;
   --card-bg: #2d2d2d;
   --card-hover: #3d3d3d;
   --header-bg: rgba(26, 26, 26, 0.9);
-  --bg-opacity: 0.9; /* 深色模式：高透明度（凸显星空深邃） */
+  --bg-opacity: 0.9; /* 默认深色：高透明度凸显星空 */
   --bg-blend: multiply; /* 深色混合：强化星空对比 */
   --bg-brightness: 0.95; /* 深色压暗：增强深邃感 */
+}
+/* 切换到浅色模式时的变量 */
+.light-mode {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --card-bg: #f8f9fa;
+  --card-hover: #e9ecef;
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --bg-opacity: 0.3; /* 浅色模式：低透明度（透明感） */
+  --bg-blend: soft-light; /* 浅色混合：柔和不刺眼 */
+  --bg-brightness: 1.05; /* 浅色提亮：避免星空太暗 */
 }
 
 /* ========== 2. 跨系统/浏览器兼容：全局背景图核心 ========== */
@@ -67,7 +69,7 @@ body::before {
   z-index: -1;
 }
 
-/* ========== 3. 深色模式切换按钮 ========== */
+/* ========== 3. 模式切换按钮（文字适配默认深色） ========== */
 .toggle-btn {
   position: fixed;
   top: 20px;
@@ -188,9 +190,9 @@ body::before {
 }
 </style>
 
-<!-- 深色模式切换按钮 -->
-<button class="toggle-btn" onclick="toggleDarkMode()">
-  切换深色/浅色模式
+<!-- 模式切换按钮（文字改为“切换浅色/深色模式”适配默认深色） -->
+<button class="toggle-btn" onclick="toggleMode()">
+  切换浅色/深色模式
 </button>
 
 <!-- 标题区域 -->
@@ -217,23 +219,25 @@ body::before {
 <!-- 底部自定义文字区（编辑这里的内容） -->
 <div class="footer-text">
   <h3>写在最后</h3>
-  <p>这个档案馆，是我和自己的对话。</p>
-  <p>每一个年份，每一个月，都是回不去的时光</p>
-  <p> </p>
+  <p>这个档案馆 是我和自己的对话</p>
+  <p>每一年 每一月 都是回不去的时光</p>
+  <p>往前走</p>
 </div>
 
-<!-- 深色模式记忆：刷新不重置 -->
+<!-- 模式记忆：默认深色，刷新不重置 -->
 <script>
-function toggleDarkMode() {
+function toggleMode() {
   const body = document.body;
-  body.classList.toggle('dark-mode');
+  body.classList.toggle('light-mode');
+  // 保存选择到本地
   if (typeof localStorage !== 'undefined') {
-    localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+    localStorage.setItem('lightMode', body.classList.contains('light-mode'));
   }
 }
+// 页面加载时：默认深色，若之前选过浅色则切换
 window.onload = function() {
-  if (typeof localStorage !== 'undefined' && localStorage.getItem('darkMode') === 'true') {
-    document.body.classList.add('dark-mode');
+  if (typeof localStorage !== 'undefined' && localStorage.getItem('lightMode') === 'true') {
+    document.body.classList.add('light-mode');
   }
 }
 </script>

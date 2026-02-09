@@ -103,77 +103,75 @@
     <!-- 1月模块 -->
     <div class="month-section">
         <h2 class="month-title">1月</h2>
-        <p class="month-text">【替换这里】写1月的故事/心情/回忆，想写多少写多少。</p>
-        <img src="【替换成你的图片Raw链接】" alt="2018年1月" class="month-img">
-        <p class="img-desc">【可选】图片说明，比如“1月的第一场雪”</p>
+        <p class="month-text">这个时候我还没啥记忆...得到12月了</p>
+        <p class="img-desc"> </p>
     </div>
 
     <!-- 2月模块 -->
     <div class="month-section">
         <h2 class="month-title">2月</h2>
-        <p class="month-text">【替换这里】写2月的内容。</p>
-        <img src="【替换成你的图片Raw链接】" alt="2018年2月" class="month-img">
-        <p class="img-desc">【可选】图片说明</p>
+        <p class="month-text">这个时候我还没啥记忆...得到12月了</p>
+        <p class="img-desc"> </p>
     </div>
 
     <!-- 3月模块（无图示例） -->
     <div class="month-section">
         <h2 class="month-title">3月</h2>
-        <p class="month-text">【替换这里】写3月的内容。</p>
+        <p class="month-text">这个时候我还没啥记忆...得到12月了</p>
     </div>
 
     <!-- 4月模块 -->
     <div class="month-section">
         <h2 class="month-title">4月</h2>
-        <p class="month-text">【替换这里】写4月的内容。</p>
+        <p class="month-text">这个时候我还没啥记忆...得到12月了</p>
     </div>
 
     <!-- 5月模块 -->
     <div class="month-section">
         <h2 class="month-title">5月</h2>
-        <p class="month-text">【替换这里】写5月的内容。</p>
+        <p class="month-text">这个时候我还没啥记忆...得到12月了</p>
     </div>
 
     <!-- 6月模块 -->
     <div class="month-section">
         <h2 class="month-title">6月</h2>
-        <p class="month-text">【替换这里】写6月的内容。</p>
+        <p class="month-text">这个时候我还没啥记忆...得到12月了</p>
     </div>
 
     <!-- 7月模块 -->
     <div class="month-section">
         <h2 class="month-title">7月</h2>
-        <p class="month-text">【替换这里】写7月的内容。</p>
+        <p class="month-text">这个时候我还没啥记忆...得到12月了</p>
     </div>
 
     <!-- 8月模块 -->
     <div class="month-section">
         <h2 class="month-title">8月</h2>
-        <p class="month-text">【替换这里】写8月的内容。</p>
+        <p class="month-text">这个时候我还没啥记忆...得到12月了</p>
     </div>
 
     <!-- 9月模块 -->
     <div class="month-section">
         <h2 class="month-title">9月</h2>
-        <p class="month-text">【替换这里】写9月的内容。</p>
+        <p class="month-text">这个时候我还没啥记忆...得到12月了</p>
     </div>
 
     <!-- 10月模块 -->
     <div class="month-section">
         <h2 class="month-title">10月</h2>
-        <p class="month-text">【替换这里】写10月的内容。</p>
+        <p class="month-text">这个时候我还没啥记忆...得到12月了</p>
     </div>
 
     <!-- 11月模块 -->
     <div class="month-section">
         <h2 class="month-title">11月</h2>
-        <p class="month-text">【替换这里】写11月的内容。</p>
+        <p class="month-text">这个时候我还没啥记忆...得到12月了</p>
     </div>
 
     <!-- 12月模块 -->
     <div class="month-section">
         <h2 class="month-title">12月</h2>
-        <p class="month-text">【替换这里】写12月的内容。</p>
+        <p class="month-text"> 12月29日，成都下了一场难忘的大雪，我还记得早上起床开门一片白的场景...玩了一整天</p>
     </div>
 
     <!-- 同步主页的深浅模式 -->
